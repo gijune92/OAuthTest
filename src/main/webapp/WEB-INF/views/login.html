@@ -17,20 +17,38 @@
 	                break;
 	            }
 	        }
-	        return rtnval;
+	        return decodeURIComponent(rtnval);
 	    }
 	</script>
 </head>
 <body>
 	<h1>카카오 로그인</h1>
 	<a href="http://gdj16.gudi.kr:20001/web/login">로그인</a>
-	<a href="http://www.naver.com"> naver </a>
-	<label> ID : </label>
-	<p id="demo"></p>
+	<a href="http://www.naver.com"> naver </a><br>
+	<label> 
+		ID : 
+		<span id="id"> </span>
+	</label><br>
+	<label>
+		Nickname : 
+		<span id="nickname"> </span>
+	</label><br>
+	<label>
+		Profile Image :
+		<img id=profile src=""> 
+	</label><br>
 	<script>
-	var res = getParameter("id")
-		if(res != ""){
-			document.getElementById("demo").innerHTML = getParameter("id");
+	var id = getParameter("id")
+	var nick = getParameter("nickname")
+	var profile = getParameter("profile_image")
+		if(id != ""){
+			document.getElementById("id").innerHTML = id;
+		}
+		if(nick != ""){
+		document.getElementById("nickname").innerHTML = nick;
+		}
+		if(profile != ""){
+			document.getElementById("nickname").src = profile;
 		}
 	</script>
 </body>
