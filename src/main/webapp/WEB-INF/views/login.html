@@ -25,10 +25,13 @@
 	<h1>카카오 로그인</h1>
 	<a href="http://gdj16.gudi.kr:20001/web/login">로그인</a>
 	<a href="http://www.naver.com"> naver </a>
+	<label> ID : </label>
 	<p id="demo"></p>
 	<script>
-		alert(getParameter("id"))
-		document.getElementById("demo").innerHTML = getParameter("id");
+	var res = getParameter("id")
+		if(res != ""){
+			document.getElementById("demo").innerHTML = getParameter("id");
+		}
 	</script>
 </body>
 </html>
